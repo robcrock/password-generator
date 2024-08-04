@@ -15,7 +15,7 @@ export const CharacterLengthSlider = () => {
       </div>
       <Slider
         defaultValue={[value]}
-        max={100}
+        max={20}
         min={1}
         step={1}
         onValueChange={handleValueChange}
