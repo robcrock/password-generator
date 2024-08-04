@@ -1,13 +1,14 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,7 +19,24 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        base: "1.125rem",
+        lg: "1.5rem",
+        xl: "2rem",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        // "jetbrains-mono": "JetBrains Mono",
+      },
       colors: {
+        "fem-red": "#f64a4a",
+        "fem-orange": "#fb7c58",
+        "fem-yellow": "#f8cd65",
+        "fem-neon-green": "#a4ffaf",
+        "fem-almost-white": "#e6e5ea",
+        "fem-grey": "#817d92",
+        "fem-dark-grey": "#24232c",
+        "fem-very-dark-grey": "#18171f",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,6 +93,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
