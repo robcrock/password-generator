@@ -1,12 +1,22 @@
 "use client";
 
+import { Button } from "./_components/ui/button";
 import { CharacterLengthSlider } from "./components/character-length-slider";
+import ArrowRightIcon from "./components/icons/arrow-right-icon";
 import { ModificationCheckbox } from "./components/modification-checkbox";
 import { StrengthIndicator } from "./components/strength-indicator";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between gap-8 p-24">
+      <div className="flex w-[540px] flex-col gap-6 bg-fem-dark-grey px-8 py-6">
+        <Button>
+          <div className="flex items-center gap-6">
+            <span>GENERATE</span>
+            <ArrowRightIcon />
+          </div>
+        </Button>
+      </div>
       <div className="flex w-[540px] flex-col gap-6 bg-fem-dark-grey px-8 py-6">
         <StrengthIndicator strengthIndex={1} />
         <StrengthIndicator strengthIndex={2} />
