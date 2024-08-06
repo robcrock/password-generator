@@ -1,38 +1,30 @@
 "use client";
 
-import { Button } from "./_components/ui/button";
+import { GeneratePasswordButton } from "./components/buttons/generate-password-button";
 import { CharacterLengthSlider } from "./components/character-length-slider";
-import ArrowRightIcon from "./components/icons/arrow-right-icon";
+import { CopyPassword } from "./components/copy-password";
 import { ModificationCheckbox } from "./components/modification-checkbox";
 import { StrengthIndicator } from "./components/strength-indicator";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between gap-8 p-24">
-      <div className="flex w-[540px] flex-col gap-6 bg-fem-dark-grey px-8 py-6">
-        <Button>
-          <div className="flex items-center gap-6">
-            <span>GENERATE</span>
-            <ArrowRightIcon />
+    <main className="flex min-h-screen place-content-center">
+      <div className="flex w-[540px] flex-col items-center gap-6 px-8 py-6">
+        <div className="text-lg font-bold text-fem-grey">
+          Password Generator
+        </div>
+        <CopyPassword />
+        <div className="flex w-full flex-col gap-8 bg-fem-dark-grey p-8">
+          <CharacterLengthSlider />
+          <div className="flex flex-col gap-6">
+            <ModificationCheckbox label={"Include Uppercase Letter"} />
+            <ModificationCheckbox label={"Include Lowercase Letters"} />
+            <ModificationCheckbox label={"Include Numbers"} />
+            <ModificationCheckbox label={"Include Symbols"} />
           </div>
-        </Button>
+          <StrengthIndicator strengthIndex={1} />
+          <GeneratePasswordButton />
+        </div>
       </div>
-      <div className="flex w-[540px] flex-col gap-6 bg-fem-dark-grey px-8 py-6">
-        <StrengthIndicator strengthIndex={1} />
-        <StrengthIndicator strengthIndex={2} />
-        <StrengthIndicator strengthIndex={3} />
-        <StrengthIndicator strengthIndex={4} />
-      </div>
-      <CharacterLengthSlider />
-      <div className="flex w-[540px] flex-col gap-6 bg-fem-dark-grey px-8 py-6">
-        <ModificationCheckbox label={"Include Uppercase Letter"} />
-        <ModificationCheckbox label={"Include Lowercase Letters"} />
-        <ModificationCheckbox label={"Include Numbers"} />
-        <ModificationCheckbox label={"Include Symbols"} />
-      </div>
-      Password Generator P4$5W0rD! Character Length Include Uppercase Letters
-      Include Lowercase Letters Include Numbers Include Symbols Strength
-      Generate
     </main>
   );
 }
