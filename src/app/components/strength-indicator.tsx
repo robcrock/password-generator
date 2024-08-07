@@ -22,6 +22,11 @@ const getStrengthIndicatorValues = (strengthIndex: number) => {
         label: "TOO WEAK!",
         color: "bg-fem-red",
       };
+    case 0:
+      return {
+        label: "",
+        color: "bg-transparent",
+      };
     default:
       throw new Error("You passed in an unhandled strength index.");
   }
