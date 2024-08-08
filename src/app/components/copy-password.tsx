@@ -1,11 +1,8 @@
 import { cn } from "../_components/utils";
-import { useState } from "react";
 import { CopyToClipboardButton } from "./buttons/copy-to-clipboard-button";
+import { PLACEHOLDER } from "../page";
 
-const PLACEHOLDER = "P4$5W0rD!";
-
-export const CopyPassword = () => {
-  const [password, setPassword] = useState(PLACEHOLDER);
+export const CopyPassword = ({ password }: { password: string }) => {
   const hasBeenGenerated = password !== PLACEHOLDER;
   return (
     <div className="flex w-full items-center justify-between bg-fem-dark-grey px-8 py-4">
