@@ -115,8 +115,8 @@ export default function Home() {
     0,
     Math.min(
       4,
-      state.characterLength < 6
-        ? 1
+      state.characterLength < 5
+        ? 0
         : state.checkboxStrength + state.characterLengthStrength,
     ),
   );
