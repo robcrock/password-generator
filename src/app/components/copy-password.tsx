@@ -1,6 +1,6 @@
 import { cn } from "../_components/utils";
+import { PLACEHOLDER } from "../constants";
 import { CopyToClipboardButton } from "./buttons/copy-to-clipboard-button";
-import { PLACEHOLDER } from "../page";
 
 export const CopyPassword = ({ password }: { password: string }) => {
   const hasBeenGenerated = password !== PLACEHOLDER;

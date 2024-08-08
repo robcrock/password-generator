@@ -6,6 +6,7 @@ import { CharacterLengthSlider } from "./components/character-length-slider";
 import { CopyPassword } from "./components/copy-password";
 import { ModificationCheckbox } from "./components/modification-checkbox";
 import { StrengthIndicator } from "./components/strength-indicator";
+import { PLACEHOLDER } from "./constants";
 
 type TState = {
   characterLength: number;
@@ -106,8 +107,6 @@ const generatePassword = (state: TState): string => {
 
   return password;
 };
-
-export const PLACEHOLDER = "P4$5W0rD!";
 
 export default function Home() {
   const [state, dispatch] = useReducer(reducer, defaultState);
