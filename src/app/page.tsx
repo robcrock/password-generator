@@ -19,13 +19,13 @@ type TState = {
 };
 
 const defaultState: TState = {
-  characterLength: 10,
+  characterLength: 0,
   upperCase: false,
   lowerCase: false,
   numbers: false,
   symbols: false,
   checkboxStrength: 0,
-  characterLengthStrength: 2,
+  characterLengthStrength: 0,
 };
 
 type ToggleableOption = "upperCase" | "lowerCase" | "numbers" | "symbols";
