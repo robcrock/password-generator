@@ -1,8 +1,6 @@
 "use client";
 
-import { Dispatch, useState } from "react";
 import { Slider } from "../_components/ui/slider";
-import { TAction } from "../page";
 
 export const CharacterLengthSlider = ({
   characterLength,
